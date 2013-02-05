@@ -8,7 +8,7 @@ and pre-tuned for you.
 Motivations
 -----------
 
-Each time you reinstall your favourite operating system -- GNU/Linux --,
+Each time you reinstall your favourite operating system _GNU/Linux_,
 whether it is on a new machine or when you change to another distro, it is
 always a pain to edit again all your favourite applications' configuration
 files.
