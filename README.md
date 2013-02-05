@@ -41,7 +41,6 @@ when you look for the configuration file of an application.
 License
 -------
 
-All files provided by the dotrc project, unless another license is specified
-in the file itself, are provided without any license and open to the public
-domain.
+All files provided by the dotrc project, unless specified in the file itself,
+are provided without any license and open to the public domain.
 
