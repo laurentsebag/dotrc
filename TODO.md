@@ -5,8 +5,8 @@ Improve documentation of the following config files:
 - tint2
 
 Add configuration files for the following applications:
-- conky
 - openbox
 - vim
 - screen
+- and a lot more...
 
