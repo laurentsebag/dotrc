@@ -51,7 +51,7 @@ show_graph_scale no
 # Frenquency in seconds at which conky is refreshed
 update_interval 1.0
 # Frequency when on battery
-update_interval_on_battery 1.0
+update_interval_on_battery 4.0
 use_spacer none
 # Use anti-aliased font and allow change of font and transparency
 use_xft yes
