@@ -143,8 +143,8 @@ ${color0}Frequency (in MHz):$color $freq
 ${color0}Frequency (in GHz):$color $freq_g
 ${color0}RAM Usage:$color $mem/$memmax - $memperc% ${membar 4}
 ${color0}Swap Usage:$color $swap/$swapmax - $swapperc% ${swapbar 4}
-# Display the CPU Usage in %
-${color0}CPU Usage:$color $cpu% ${cpubar 4}
+# Display the CPU Usage in % (cpu0 is the total usage of all cpus)
+${color0}CPU Usage:$color ${cpu cpu0}% ${cpubar cpu0}
 ## Or display it as a graph
 ##${color0}CPU Usage:$color ${cpugraph 4 30,200 224499 882222 -t}
 ${color0}Processes:$color $processes  ${color0}Running:$color $running_processes
