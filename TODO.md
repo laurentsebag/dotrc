@@ -8,5 +8,5 @@ Add configuration files for the following applications:
 - openbox
 - vim
 - screen
-- and a lot more...
+- qxkb
 
