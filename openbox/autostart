@@ -1,0 +1,33 @@
+#
+# Openbox autostart file
+# File location: ~/.config/openbox/autostart
+#
+# This file contains all the commands that will be executed when openbox is
+# launched. You can add here any application that you would like to see started
+# each time you open an openbox session.
+#
+
+# Run tint2 task bar
+tint2 &
+
+# Start the application starter
+launchy &
+
+# Set up wallpaper
+feh --bg-fill ~/Pictures/wallpapers/DSC_2664.JPG
+
+# Start the screensaver
+xscreensaver -no-splash &
+
+# Set default luminosity
+xbacklight -set 30
+
+# Start the compisition manager (for window transparency)
+compton -b
+
+# Start resource monitoring widget conky
+conky -d -q
+
+# Start the keyboard layout switcher
+qxkb &
+
