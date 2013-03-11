@@ -1,11 +1,20 @@
 #
 # Bash startup configuration file
 #
-# File location: ~/.bashrc
+# File location: ~/.bashrc or /etc/bash.bashrc
 #
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+
+# Enable 256 colors mode in terminals
+export TERM='xterm-256color'
+
+# Add color to the prompt and a different prompt if user is root
+PS1="$(if [[ ${EUID} == 0 ]]; then echo '\[\033[01;31m\]\h'; else echo '\[\033[00;32m\]\u@\h'; fi)\[\033[01;34m\] \w \$([[ \$? != 0 ]] && echo \"\[\033[01;31m\]:(\[\033[01;34m\] \")\$\[\033[00m\] "
+PS2='> '
+PS3='> '
+PS4='+ '
 
 #
 # Set up the prompt string
@@ -39,7 +48,7 @@ alias ll='ls -lh'
 # Short version of ls displaying hidden files
 alias la='ls -a'
 # Short version of ls for lazy people
-alias l='ls'
+alias l='ls --group-directories-first'
 
 
 #
@@ -47,4 +56,6 @@ alias l='ls'
 #
 # Defines vim as the default shell text editor
 export EDITOR="vim"
+# Display a fortune each time a terminal is launched
+[[ "$PS1" ]] && /usr/bin/fortune
 
