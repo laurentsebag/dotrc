@@ -51,6 +51,7 @@ if has("autocmd")
 
   " For all text files set 'textwidth' to 78 characters and autowrap
   autocmd FileType text setlocal textwidth=78
+  autocmd FileType markdown setlocal textwidth=78
 
   " When editing a file, always jump to the last known cursor position.
   " Don't do it when the position is invalid or when inside an event handler
@@ -112,14 +113,26 @@ set undodir=/tmp
 " Highlight the line where the cursor is
 set cursorline
 
-" press Space to turn off highlighting and clear any messages displayed
-nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
-
 " Show invisible characters like tabs or trailing spaces
 set list
 
 " Change the characters representing tabs and trailing spaces
 set listchars=tab:▸\ ,trail:·,extends:#,nbsp:·
+
+" Turn backup off, since most stuff is in SVN, git et.c anyway...
+set nobackup
+set nowb
+set noswapfile
+
+" The leader key is set to "\" by default, but you can change it if you like
+"" Set the leader key to be ","
+"let mapleader = ","
+
+" Use ";" as ":" for commands like saving, exiting.
+nnoremap ; :
+
+" press Space to turn off highlighting and clear any messages displayed
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 " Toggle show/hide invisible chars
 nnoremap <leader>i :set list!<cr>
