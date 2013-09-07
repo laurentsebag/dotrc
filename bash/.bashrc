@@ -10,12 +10,6 @@
 # Enable 256 colors mode in terminals
 export TERM='xterm-256color'
 
-# Add color to the prompt and a different prompt if user is root
-PS1="$(if [[ ${EUID} == 0 ]]; then echo '\[\033[01;31m\]\h'; else echo '\[\033[00;32m\]\u@\h'; fi)\[\033[01;34m\] \w \$([[ \$? != 0 ]] && echo \"\[\033[01;31m\]:(\[\033[01;34m\] \")\$\[\033[00m\] "
-PS2='> '
-PS3='> '
-PS4='+ '
-
 #
 # Set up the prompt string
 #
@@ -30,7 +24,13 @@ PS4='+ '
 # \$: if root, a #, else a $
 #
 # For more options, man bash and search for PROMPTING.
-PS1='[\u@\h \W]\$ '
+# Example: PS1='[\u@\h \W]\$ '
+
+# Add color to the prompt and a different prompt if user is root
+PS1="$(if [[ ${EUID} == 0 ]]; then echo '\[\033[01;31m\]\h'; else echo '\[\033[00;32m\]\u@\h'; fi)\[\033[01;34m\] \w \$([[ \$? != 0 ]] && echo \"\[\033[01;31m\]:(\[\033[01;34m\] \")\$\[\033[00m\] "
+PS2='> '
+PS3='> '
+PS4='+ '
 
 #
 # Define aliases
