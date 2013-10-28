@@ -173,3 +173,7 @@ nnoremap k gk
 inoremap jj <ESC>
 inoremap kk <ESC>
 
+" For a smoother mouse scrolling
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
+
